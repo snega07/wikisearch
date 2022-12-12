@@ -24,6 +24,7 @@ async function handleSearch(e) {
   return (
     
     <div className="App">
+      <h1>Wiki search</h1>
     <input type="text" className="search" onKeyUp={handleSearch} />
    
     <ul>
