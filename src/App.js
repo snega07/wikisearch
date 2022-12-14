@@ -34,7 +34,14 @@ async function handleSearch(e) {
     let url=  `https://en.wikipedia.org/wiki/${data.title}`.trim();
       console.log(url);
       return(<div>
-        <a href={url} style={{textDecoration:'none'}}>{data.title}</a></div>)})}
+        <center>
+        <table style={{width:'400px'}}>
+      <tr><a href={url} style={{textDecoration:'none',padding:'20px',color:'brown'}}>{data.title}</a></tr>  
+        </table>
+        </center>
+        </div>
+        
+        )})}
  </ul>
     </div>
   );
