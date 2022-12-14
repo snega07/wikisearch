@@ -28,7 +28,13 @@ async function handleSearch(e) {
     <input type="text" className="search" onKeyUp={handleSearch} />
    
     <ul>
-    {result.result && result.result.query.search.map((data,i) =>{return(<div key={i}>{data.title}</div>)})}
+    {result.result && result.result.query.search.map((data,i) =>{
+      let page = data.pageid;
+      //let url =`https://en.wikipedia.org/w/api.php?origin=*&action=query&prop=info&pageids=${page}&inprop=url&format=json`;
+    let url=  `https://en.wikipedia.org/wiki/${data.title}`.trim();
+      console.log(url);
+      return(<div key={i}>
+        <a href={url}>{data.title}</a></div>)})}
  </ul>
     </div>
   );
